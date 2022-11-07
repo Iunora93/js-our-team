@@ -71,6 +71,8 @@ for (let i = 0; i < team.length; i++) {
     console.log(teamInformation);
     /* Stampare le stesse informazioni su DOM sottoforma di stringhe */
     const listItem = document.createElement('li');
-    listItem.innerHTML = teamInformation;
+    listItem.innerHTML = teamInformation.name;
+    listItem.innerHTML = teamInformation.role;
+    listItem.innerHTML = teamInformation.photo;
     document.querySelector('.list-item').append(listItem);
 }
