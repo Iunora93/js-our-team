@@ -65,3 +65,12 @@ const team =
 ];
 
 console.log(team);
+
+for (let i = 0; i < team.length; i++) {
+    const teamInformation = team[i];
+    console.log(teamInformation);
+    /* Stampare le stesse informazioni su DOM sottoforma di stringhe */
+    const listItem = document.createElement('li');
+    listItem.innerHTML = teamInformation;
+    document.querySelector('.list-item').append(listItem);
+}
