@@ -57,13 +57,30 @@ const team =
 ];
 
 /* Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto */
-for (let i = 0; i < team.length; i++) {
-    const teamInformation = team[i];
-    console.log(teamInformation);
+for (let i = 0; i < team.length; i++){
+    const teams = team[i];
+    console.log(teams);
+    const listItem = `
+    <li>
+        <h4>${teams.name}</h4>
+        <p>${teams.role}</p>
+        <img src="img/${teams.photo}" />
+    </li>
+    `;
     /* Stampare le stesse informazioni su DOM sottoforma di stringhe */
-    const listItem = document.createElement('li');
+    document.getElementById('list-item').innerHTML += (listItem);
+
+}
+
+
+
+/* for (let i = 0; i < team.length; i++) {
+    const teamInformation = team[i];
+    console.log(teamInformation); */
+    /* Stampare le stesse informazioni su DOM sottoforma di stringhe */
+/*     const listItem = document.createElement('li');
     listItem.innerHTML = teamInformation.name;
     listItem.innerHTML += ", " + teamInformation.role;
     listItem.innerHTML += ", " + teamInformation.photo;    
     document.querySelector('.list-item').append(listItem);
-};
+}; */
